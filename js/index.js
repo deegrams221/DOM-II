@@ -63,6 +63,10 @@ destination.forEach((elementH) => {
 const navA = document.querySelector('.nav');
 navA.addEventListener("mouseover", (e) => {
     e.target.style.transform = "scale(1.3)";
+    // nested event - click and prevent nav default
+    navA.addEventListener("click", (e) => {
+        e.preventDefault();
+    });
 });
 
 // 9. nav mouseout
@@ -74,12 +78,8 @@ navA.addEventListener("mouseout", (e) => {
 const contentDest = document.querySelector('.content-destination');
 contentDest.addEventListener("dblclick", (e) => {
     e.target.style.transform = "scale(1.5)";
-});
-
-// prevent default
-const links = document.querySelectorAll('nav a');
-links.forEach((elementA) => {
-    elementA.addEventListener("click", (e) => {
-        e.preventDefault();
+    // nested event - mouseout
+    contentDest.addEventListener("mouseout", (e) => {
+        e.target.style.color = "purple";
     });
 });
