@@ -41,18 +41,19 @@ imgContent.addEventListener("dblclick", () => {
 
 // 7. mousemove
 const destination = document.querySelectorAll(".destination h4");
-// destination[0].addEventListener("mousemove", (e) => {
-//   e.target.style.color = "red";
-// });
-// destination[1].addEventListener("mousemove", (e) => {
-//   e.target.style.color = "red";
-// });
-// destination[2].addEventListener("mousemove", (e) => {
-//   e.target.style.color = "red";
-// });
-
 destination.forEach((elementH) => {
     elementH.addEventListener("mousemove", (e) => {
         e.target.style.color = "red";
     });
+});
+
+// 8. nav mouseover
+const navA = document.querySelector('.nav');
+navA.addEventListener("mouseover", (e) => {
+    e.target.style.transform = "scale(1.3)";
+});
+
+// 9. nav mouseout
+navA.addEventListener("mouseout", (e) => {
+    e.target.style.transform = "scale(1)";
 });
