@@ -24,5 +24,12 @@ window.addEventListener("scroll", (e) => {
     document.body.style.opacity = "0.3";
     setTimeout(() => {
         document.body.style.opacity = "1";
-    }, 700);
+    }, 1000);
 });
+
+// 5. mouse enter
+const headNew = document.querySelector('.main-navigation');
+headNew.addEventListener("mouseenter", (e) => {
+    e.target.style.backgroundColor = "lightgrey";
+});
+
