@@ -63,3 +63,11 @@ const contentDest = document.querySelector('.content-destination');
 contentDest.addEventListener("dblclick", (e) => {
     e.target.style.transform = "scale(1.5)";
 });
+
+// prevent default
+const links = document.querySelectorAll('nav a');
+links.forEach((elementA) => {
+    elementA.addEventListener("click", (e) => {
+        e.preventDefault();
+    });
+});
