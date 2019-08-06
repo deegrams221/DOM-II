@@ -20,31 +20,24 @@ paragraphs.forEach((elementP) => {
 });
 
 // 4. scroll
-window.addEventListener("scroll", (e) => {
+window.addEventListener('scroll', (e) => {
     e.target.body.style.opacity = "0.3";
     setTimeout(() => {
         e.target.body.style.opacity = "1";
     }, 1000);
-});
 
-// 4. scroll-2
-window.addEventListener("scroll", () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const scroll1 = window.scrollY;
     if (Math.ceil(scroll1) === scrollable){
         alert("You\'re at the bottom!");
     };
-});
 
-// 4. scroll-3
-const [red, green, blue] = [69, 111, 225]
-const display = document.querySelector('body')
-
-window.addEventListener('scroll', (e) => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 150
-  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-  e.target.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-})
+    e.target.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1423450822265-fcd97e52ecb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=520&q=80')";
+    e.target.body.style.backgroundRepeat = "no-repeat";
+    e.target.body.style.backgroundPosition = "center";
+    e.target.body.style.backgroundSize = "cover";
+    e.target.body.style.color = "white";
+}); 
 
 // 5. mouseenter
 const headNew = document.querySelector('.main-navigation');
