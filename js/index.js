@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
     }, 1000);
 });
 
-// 5. mouse enter
+// 5. mouseenter
 const headNew = document.querySelector('.main-navigation');
 headNew.addEventListener("mouseenter", (e) => {
     e.target.style.backgroundColor = "lightgrey";
@@ -37,4 +37,16 @@ headNew.addEventListener("mouseenter", (e) => {
 const imgContent = document.querySelector('.img-content');
 imgContent.addEventListener("dblclick", () => {
     imgContent.style.transform = "scale(1.3)";
+});
+
+// 7. mousemove
+const destination = document.querySelectorAll(".destination h4");
+destination[0].addEventListener("mousemove", (e) => {
+  e.target.style.color = "red";
+});
+destination[1].addEventListener("mousemove", (e) => {
+  e.target.style.color = "red";
+});
+destination[2].addEventListener("mousemove", (e) => {
+  e.target.style.color = "red";
 });
