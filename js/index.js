@@ -27,6 +27,25 @@ window.addEventListener("scroll", (e) => {
     }, 1000);
 });
 
+// 4. scroll-2
+window.addEventListener("scroll", () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scroll1 = window.scrollY;
+    if (Math.ceil(scroll1) === scrollable){
+        alert("You\'re at the bottom!");
+    };
+});
+
+// 4. scroll-3
+const [red, green, blue] = [69, 111, 225]
+const display = document.querySelector('body')
+
+window.addEventListener('scroll', (e) => {
+  const y = 1 + (window.scrollY || window.pageYOffset) / 150
+  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+  e.target.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+})
+
 // 5. mouseenter
 const headNew = document.querySelector('.main-navigation');
 headNew.addEventListener("mouseenter", (e) => {
