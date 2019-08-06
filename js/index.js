@@ -20,10 +20,10 @@ paragraphs.forEach((elementP) => {
 });
 
 // 4. scroll
-window.addEventListener("scroll", () => {
-    document.body.style.opacity = "0.3";
+window.addEventListener("scroll", (e) => {
+    e.target.body.style.opacity = "0.3";
     setTimeout(() => {
-        document.body.style.opacity = "1";
+        e.target.body.style.opacity = "1";
     }, 1000);
 });
 
@@ -35,8 +35,8 @@ headNew.addEventListener("mouseenter", (e) => {
 
 // 6. dblclick
 const imgContent = document.querySelector('.img-content');
-imgContent.addEventListener("dblclick", () => {
-    imgContent.style.transform = "scale(1.3)";
+imgContent.addEventListener("dblclick", (e) => {
+    e.target.style.transform = "scale(1.3)";
 });
 
 // 7. mousemove
@@ -56,4 +56,10 @@ navA.addEventListener("mouseover", (e) => {
 // 9. nav mouseout
 navA.addEventListener("mouseout", (e) => {
     e.target.style.transform = "scale(1)";
+});
+
+// 10. destination dblclick
+const contentDest = document.querySelector('.content-destination');
+contentDest.addEventListener("dblclick", (e) => {
+    e.target.style.transform = "scale(1.5)";
 });
